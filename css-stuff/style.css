@@ -6,7 +6,7 @@ body {
     background-image: url('background.jpg');
     background-size: cover;
 }
-h2 p {
+h2 + p {
     color: #AA4139;
     text-align: center;
     border: 5px solid rgba(255, 176, 170, 0.5);
@@ -14,11 +14,11 @@ h2 p {
 }
 
 p {
-    color: pink;
-}
-
-p {
-    color: green;
+    line-height: 50px;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 80%;
+    font-family: 'Poiret One', cursive;
 }
 
 li {
@@ -26,7 +26,7 @@ li {
     display: inline-block;
 }
 
-.webtext {
+.webtext:first-child {
     border: 5px dashed green;
 }
 
