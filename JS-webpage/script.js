@@ -4,7 +4,8 @@ function sayHello() { // this function clearly has a name
 
 sayHello();
 
-var sayBye = function () { // this function doesn't have a name. This is an anonymous function. Its assigned to sayBye so we can reference it via sayBye but otherwise we cannot access this function.
+var sayBye = function () { // this function doesn't have a name. This is an anonymous function. 
+    // It's assigned to sayBye so we can reference it via sayBye but otherwise we cannot access this function.
     console.log("Bye");
 }
 
@@ -18,11 +19,8 @@ sing("Heloooooo");
 sing("Backstreets back alright");
 
 function multiply(a, b) {
-    if (a > 10 || b > 10) {
-        return "that's too hard";
-    } else {
-        return a * b;
-    }
+    return a * b;
 }
 
-console.log(multiply(13, 31));
+
+alert(multiply(3,4));
