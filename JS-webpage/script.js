@@ -27,3 +27,17 @@ function multiply(a, b) {
 
 
 var list = ["Tiger", "Cat", "Bear", "Bird"];
+
+
+const persons = [
+    {firstname: "Malcom", lastname: "Reynolds"},
+    {firstname: "Minami", lastname: "Tsunoda"},
+    {firstname: "Craig", lastname: "Dejean"}
+
+];
+
+function getFullName(item) {
+    return [item.firstname,item.lastname].join(" ");
+}
+
+persons.map(getFullName);
