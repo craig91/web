@@ -9,7 +9,7 @@ var sayBye = function () { // this function doesn't have a name. This is an anon
     console.log("Bye");
 }
 
-sayBye();
+// sayBye();
 
 function sing(song) {
     console.log(song);
@@ -23,4 +23,7 @@ function multiply(a, b) {
 }
 
 
-alert(multiply(3,4));
+// alert(multiply(3,4));
+
+
+var list = ["Tiger", "Cat", "Bear", "Bird"];
