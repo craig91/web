@@ -161,16 +161,19 @@
 
 var fun = 5;
 function funFunction() {
+    // child scope
     var fun = 'hello';
     console.log(1, fun)
 }
 
 function funnerFunction() {
+    // child scope
     var fun = "Bye";
     console.log(2, fun);
 }
 
 function funnestFunction() {
+    // child scope
     fun = "AHHHHH";
     console.log(3, fun);
 }
