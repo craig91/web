@@ -70,32 +70,37 @@
 // ]
 
 
-var database = [{
-    username: "craig",
-    password: "1234"
-}]
+// var database = [{
+//     username: "craig",
+//     password: "1234"
+// }]
 
-var newsFeed = [
-    {
-        username: "Tim",
-        timeline: "So tired from all of that learning"
-    },
-    {
-        username: "sally",
-        timeline: "JavaScript is soo cool"
-    }
-]
+// var newsFeed = [
+//     {
+//         username: "Tim",
+//         timeline: "So tired from all of that learning"
+//     },
+//     {
+//         username: "sally",
+//         timeline: "JavaScript is soo cool"
+//     }
+// ]w
 
-var usernamePrompt = prompt("What's your username? ");
-var passwordPrompt = prompt("What's your password? ");
-// console.log(usernamePrompt, passwordPrompt)
-function signIn(user, pass) {
-    if (user === database[0].username && 
-        pass === database[0].password) {
-        console.log(newsFeed)
-    } else {
-        alert("Sorry wrong username and password!")
-    }
+// var usernamePrompt = prompt("What's your username? ");
+// var passwordPrompt = prompt("What's your password? ");
+// // console.log(usernamePrompt, passwordPrompt)
+// function signIn(user, pass) {
+//     if (user === database[0].username && 
+//         pass === database[0].password) {
+//         console.log(newsFeed)
+//     } else {
+//         alert("Sorry wrong username and password!")
+//     }
+// }
+
+// signIn(usernamePrompt, passwordPrompt);
+
+var todos = ["Clean Room", "Brush Teeth", "Exercise", "Study JavaScript", "Eat Healthy"];
+for (i = 0; i < todos.length; i++) {
+    todos[i] += " !";
 }
-
-signIn(usernamePrompt, passwordPrompt);
