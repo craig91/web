@@ -70,57 +70,57 @@
 // ]
 
 
-var database = [{
-    username: "craig",
-    password: "1234"
-},
-{
-    username: "sally",
-    password: "123"
-},
-{
-    username: "ingrid",
-    password: "777"
-}
-];
+// var database = [{
+//     username: "craig",
+//     password: "1234"
+// },
+// {
+//     username: "sally",
+//     password: "123"
+// },
+// {
+//     username: "ingrid",
+//     password: "777"
+// }
+// ];
 
-var newsFeed = [
-    {
-        username: "Tim",
-        timeline: "So tired from all of that learning"
-    },
-    {
-        username: "sally",
-        timeline: "JavaScript is soo cool"
-    },
-    {
-        username: "mitch",
-        timeline: "JavaScript is pretty cool"
-    }
-]
+// var newsFeed = [
+//     {
+//         username: "Tim",
+//         timeline: "So tired from all of that learning"
+//     },
+//     {
+//         username: "sally",
+//         timeline: "JavaScript is soo cool"
+//     },
+//     {
+//         username: "mitch",
+//         timeline: "JavaScript is pretty cool"
+//     }
+// ]
 
-var usernamePrompt = prompt("What's your username? ");
-var passwordPrompt = prompt("What's your password? ");
-// console.log(usernamePrompt, passwordPrompt)
+// var usernamePrompt = prompt("What's your username? ");
+// var passwordPrompt = prompt("What's your password? ");
+// // console.log(usernamePrompt, passwordPrompt)
 
-function isUserValid(username, password) {
-    for (var i = 0; i < database.length; i++) {
-        if (database[i].username === username && database[i].password === password) {
-            return true;
-        }
-    }
-    return false;
-}
-function signIn(username, password) {
+// function isUserValid(username, password) {
+//     for (var i = 0; i < database.length; i++) {
+//         if (database[i].username === username && database[i].password === password) {
+//             return true;
+//         }
+//     }
+//     return false;
+// }
+// function signIn(username, password) {
 
-    if (isUserValid(username, password)) {
-        console.log(newsFeed)
-    } else {
-        alert("Sorry wrong username and password!");
-    }
-}
+//     if (isUserValid(username, password)) {
+//         console.log(newsFeed)
+//     } else {
+//         alert("Sorry wrong username and password!");
+//     }
+// }
 
-signIn(usernamePrompt, passwordPrompt);
+// signIn(usernamePrompt, passwordPrompt);
 
 
 // var todos = ["Clean Room", "Brush Teeth", "Exercise", "Study JavaScript", "Eat Healthy"];
@@ -153,3 +153,29 @@ signIn(usernamePrompt, passwordPrompt);
 //   console.log(counterTwo)
 //   counterTwo--;
 // } while (counterTwo > 0)
+
+
+// scope
+
+//Root scope (window)
+
+var fun = 5;
+function funFunction() {
+    var fun = 'hello';
+    console.log(1, fun)
+}
+
+function funnerFunction() {
+    var fun = "Bye";
+    console.log(2, fun);
+}
+
+function funnestFunction() {
+    fun = "AHHHHH";
+    console.log(3, fun);
+}
+
+console.log("window", fun);
+funFunction();
+funnerFunction();
+funnestFunction();
