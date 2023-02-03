@@ -100,7 +100,34 @@
 
 // signIn(usernamePrompt, passwordPrompt);
 
+
 var todos = ["Clean Room", "Brush Teeth", "Exercise", "Study JavaScript", "Eat Healthy"];
-for (i = 0; i < todos.length; i++) {
-    todos[i] += " !";
+
+
+
+for (let i = 0; i < todos.length; i++) {
+  todos[i] = todos[i] += "!"
+  console.log(i)
 }
+
+todos.forEach(function(i) {
+  console.log(i)
+});
+
+var todosLength = todos.length; // = 5
+// for (let i = 0; i < todosLength; i++) {
+//   todos.pop()
+// }
+// console.log(todos)
+
+var counterOne = 10;
+while (counterOne > 0) {
+  console.log(counterOne);
+  counterOne--
+}
+
+var counterTwo = 10;
+do {
+  console.log(counterTwo)
+  counterTwo--;
+} while (counterTwo > 0)
