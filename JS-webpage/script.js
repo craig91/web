@@ -70,64 +70,86 @@
 // ]
 
 
-// var database = [{
-//     username: "craig",
-//     password: "1234"
-// }]
+var database = [{
+    username: "craig",
+    password: "1234"
+},
+{
+    username: "sally",
+    password: "123"
+},
+{
+    username: "ingrid",
+    password: "777"
+}
+];
 
-// var newsFeed = [
-//     {
-//         username: "Tim",
-//         timeline: "So tired from all of that learning"
-//     },
-//     {
-//         username: "sally",
-//         timeline: "JavaScript is soo cool"
-//     }
-// ]w
+var newsFeed = [
+    {
+        username: "Tim",
+        timeline: "So tired from all of that learning"
+    },
+    {
+        username: "sally",
+        timeline: "JavaScript is soo cool"
+    },
+    {
+        username: "mitch",
+        timeline: "JavaScript is pretty cool"
+    }
+]
 
-// var usernamePrompt = prompt("What's your username? ");
-// var passwordPrompt = prompt("What's your password? ");
-// // console.log(usernamePrompt, passwordPrompt)
-// function signIn(user, pass) {
-//     if (user === database[0].username && 
-//         pass === database[0].password) {
-//         console.log(newsFeed)
-//     } else {
-//         alert("Sorry wrong username and password!")
-//     }
-// }
+var usernamePrompt = prompt("What's your username? ");
+var passwordPrompt = prompt("What's your password? ");
+// console.log(usernamePrompt, passwordPrompt)
 
-// signIn(usernamePrompt, passwordPrompt);
+function isUserValid(username, password) {
+    for (var i = 0; i < database.length; i++) {
+        if (database[i].username === username && database[i].password === password) {
+            return true;
+        }
+    }
+    return false;
+}
+function signIn(username, password) {
 
-
-var todos = ["Clean Room", "Brush Teeth", "Exercise", "Study JavaScript", "Eat Healthy"];
-
-
-
-for (let i = 0; i < todos.length; i++) {
-  todos[i] = todos[i] += "!"
-  console.log(i)
+    if (isUserValid(username, password)) {
+        console.log(newsFeed)
+    } else {
+        alert("Sorry wrong username and password!");
+    }
 }
 
-todos.forEach(function(i) {
-  console.log(i)
-});
+signIn(usernamePrompt, passwordPrompt);
 
-var todosLength = todos.length; // = 5
-// for (let i = 0; i < todosLength; i++) {
-//   todos.pop()
+
+// var todos = ["Clean Room", "Brush Teeth", "Exercise", "Study JavaScript", "Eat Healthy"];
+
+
+
+// for (let i = 0; i < todos.length; i++) {
+//   todos[i] = todos[i] += "!"
+//   console.log(i)
 // }
-// console.log(todos)
 
-var counterOne = 10;
-while (counterOne > 0) {
-  console.log(counterOne);
-  counterOne--
-}
+// todos.forEach(function(i) {
+//   console.log(i)
+// });
 
-var counterTwo = 10;
-do {
-  console.log(counterTwo)
-  counterTwo--;
-} while (counterTwo > 0)
+// var todosLength = todos.length; // = 5
+// // for (let i = 0; i < todosLength; i++) {
+// //   todos.pop()
+// // }
+// // console.log(todos)
+
+// var counterOne = 10;
+// while (counterOne > 0) {
+//   console.log(counterOne);
+//   counterOne--
+// }
+
+// var counterTwo = 10;
+// do {
+//   console.log(counterTwo)
+//   counterTwo--;
+// } while (counterTwo > 0)
