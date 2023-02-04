@@ -315,3 +315,9 @@ let sym1 = Symbol();
 let sym2 = Symbol("foo");
 let sym3 = Symbol("foo");
 
+
+function add(a, b) {
+    return a * b;
+}
+
+const add = (a, b) => a + b;
