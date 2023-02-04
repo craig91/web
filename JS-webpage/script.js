@@ -296,3 +296,22 @@ function q1() {
   word(3);
   word(4);
   word(10);
+
+// template strings
+const name = "sally";
+const age = 34;
+const pet = "horse";
+const greetingBest = `Hello ${name} you seem to be ${age-10}. What a lovely ${pet}`;
+
+
+// default arguments
+
+function greet(name = '', age=30, pet="cat") {
+    return greetingBest = `Hello ${name} you seem to be ${age-10}. What a lovely ${pet}`;
+}
+
+// symbol
+let sym1 = Symbol();
+let sym2 = Symbol("foo");
+let sym3 = Symbol("foo");
+
