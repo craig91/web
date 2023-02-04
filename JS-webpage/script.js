@@ -182,3 +182,117 @@ console.log("window", fun);
 funFunction();
 funnerFunction();
 funnestFunction();
+
+
+
+function q1() {
+    var a = 5;
+    if (a > 1) {
+      a = 3
+    }
+    alert(a);
+  }
+  
+  // q1();
+  
+  var a = 0;
+  function q2() {
+    a = 5;
+  }
+  function q22() {
+    console.log(a);
+  }
+  
+  //q2();
+  //q22();
+  
+  
+  
+  function isUserValid(bool) {
+    return bool;
+  }
+  var answer = isUserValid(true) ? "You may enter" : "Access Denied";
+  
+  // console.log(answer);
+  
+  var automatedAnswer = "You account # is " + (isUserValid(true) ? "1234" : "not available")
+  
+  function condition() {
+    if (isUserValid(true)) {
+      return "You may enter";
+    } else {
+      return "Access Denied";
+    }
+  }
+  
+  // console.log(automatedAnswer);
+  // console.log(condition())
+  
+  function winBattle(bool) {
+    return bool;
+  }
+  var experiencePoints = winBattle(false) ? "10" : "1"
+  
+  function experiencePoints() {
+    if (winBattle()) {
+      return 10;
+    } else {
+      return 1;
+    }
+  }
+  
+  // console.log(experiencePoints);
+  
+  
+  function moveCommand(direction) {
+    var whatHappens;
+    switch (direction) {
+      case "forward":
+        whatHappens = "You encounter a monster";
+        break;
+      case "back":
+        whatHappens = "You arrived home";
+        break;
+      case "right":
+        whatHappens = "You found a river";
+        break;
+      case "left":
+        whatHappens = "You run into a troll";
+        break;
+      default:
+        whatHappens = "Please enter a valid direction";
+    }
+    return whatHappens;
+  }
+  
+  // console.log(moveCommand("forward"));
+  // console.log(moveCommand("back"));
+  // console.log(moveCommand("left"));
+  // console.log(moveCommand("right"));
+  // console.log(moveCommand("rubbish"));
+  
+  function word(vocab) {
+    switch(vocab) {
+      case 1:
+        console.log("This");
+        break;
+      case 2:
+        console.log("That");
+        break;
+      case 3:
+        console.log("The");
+        break;
+      case 4:
+        console.log("Other")
+        break;
+      default:
+        console.log("Please put numbers 1 through 4");
+    }
+    return 0;
+  }
+  
+  word(1);
+  word(2);
+  word(3);
+  word(4);
+  word(10);
