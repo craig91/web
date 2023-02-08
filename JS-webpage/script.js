@@ -368,5 +368,27 @@ multiplyBy5(4); // => 20
 multiplyBy5(100); // => 500
 multiplyBy5(2); // => 10
 
+// Compose
+// the act of putting 2 functions togther to form a third function where 
+// the output of one function is the input of the other
 
+const compose = (f, g) => (a) => f(g(a));
+// f is a function
+// g is also a function
+const sum = (num) => num + 1;
+// or (es5 used for references purposes)
+// function sum2(num) {
+//   return num + 1;
+// }
 
+compose(sum, sum)(5) 
+const add1 = (num) => num + 1;
+const add5 = (num) => num + 5;
+compose(add1, add5)(10); // => 16
+// compose (f = +1, g = +5) => (a = 10) => +1(+5(10))
+
+// So lets break this down.
+// when I run compose(sum, sum)(5) lets look at the original compose function:
+// const compose = (sum, sum) => (5) => sum(sum(5));
+// f and g are replaced with sum 2 times, then a becomes 5
+// the sum functon is the num plus one, so sum(sum(5)) sum(5) + 1 = 6 then sum(5) = 7
