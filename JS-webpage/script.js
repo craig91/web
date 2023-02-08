@@ -317,6 +317,10 @@ function greet(name = '', age=30, pet="cat") {
 
 
 // Closures
+
+// the child scope always has access aka "remembers" what is in the parent scope. This does not work the other way around.
+// In belows case, first() creates the variable greet = 'hi', then creates the child function/scope second() which calls the greet variable
+// first DOES NOT have access to the scope of second() but second() has access to the scope of first().
 const first = () => {
   const greet = 'hi';
   const second = () => {
@@ -326,3 +330,35 @@ const first = () => {
 }
 const newFunc = first();
 newFunc();
+
+ 
+// Currying
+// this is the process of converting a function that takes multiple arguments into a function that takes each argument one at a time.
+// *** This is a functional programming concept ***
+const multiply = (a,b) => a * b;
+
+// the multiply function above would run simply like this;
+// multiply(3, 3) => 9
+
+
+const curriedMultiply = (a) => (b) => a * b;
+
+// currying is like having a function for each argument.
+// so it would be like this: 
+
+curriedMultiply(3); // would return (b) => a * b;
+// Where is a? Since I ran curriedMultiply 3, a clearer picture would be this:
+// const curriedMultiply = (3) => (b) => 3 * b;
+// So what should I do next? this:
+curriedMultiply(3)(4); // => 12
+// so now the function looks like this:
+// const curriedMultiply = (3) => (4) => 3 * 4; => 12
+// the oldschool way to curry would look like this:
+function multi(a) {
+  return (b) => {
+    return a * b;
+  }
+}
+
+
+
