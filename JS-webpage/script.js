@@ -291,11 +291,11 @@ function q1() {
     return 0;
   }
   
-  word(1);
-  word(2);
-  word(3);
-  word(4);
-  word(10);
+  // word(1);
+  // word(2);
+  // word(3);
+  // word(4);
+  // word(10);
 
 // template strings
 const name = "sally";
@@ -311,13 +311,18 @@ function greet(name = '', age=30, pet="cat") {
 }
 
 // symbol
-let sym1 = Symbol();
-let sym2 = Symbol("foo");
-let sym3 = Symbol("foo");
+// let sym1 = Symbol();
+// let sym2 = Symbol("foo");
+// let sym3 = Symbol("foo");
 
 
-function add(a, b) {
-    return a * b;
+// Closures
+const first = () => {
+  const greet = 'hi';
+  const second = () => {
+    console.log(greet);
+  }
+  return second;
 }
-
-const add = (a, b) => a + b;
+const newFunc = first();
+newFunc();
