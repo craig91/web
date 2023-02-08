@@ -360,5 +360,13 @@ function multi(a) {
   }
 }
 
+// a pretty useful example on how I would use currying is when i would want to 
+// multiply numbers by a certain number, lets say 5
+
+const multiplyBy5 = curriedMultiply(5);
+multiplyBy5(4); // => 20
+multiplyBy5(100); // => 500
+multiplyBy5(2); // => 10
+
 
 
