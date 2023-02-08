@@ -403,3 +403,14 @@ const newArray = array.forEach((num) => {
 }) 
 
 console.log(double);
+
+// filter 
+
+// const filterArray = array.filter(num => {
+//  return num > 5
+// })
+
+// or
+
+const filterArray = array.filter(num => num > 5);
+console.log('filter', filterArray);
