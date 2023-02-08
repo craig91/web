@@ -395,14 +395,14 @@ compose(add1, add5)(10); // => 16
 
 
 // Advanced Arrays
-const array = [1,2,10,16];
-const double = [];
+//const array = [1,2,10,16];
+// const double = [];
 
-const newArray = array.forEach((num) => {
-  double.push(num * 2);
-}) 
+// const newArray = array.forEach((num) => {
+//   double.push(num * 2);
+// }) 
 
-console.log(double);
+// console.log(double);
 
 // filter 
 
@@ -412,5 +412,71 @@ console.log(double);
 
 // or
 
-const filterArray = array.filter(num => num > 5);
-console.log('filter', filterArray);
+// const filterArray = array.filter(num => num > 5);
+// console.log('filter', filterArray);
+
+// const reduceArray = array.reduce((accumulator, num) => {
+//   return accumulator + num;
+// }, 5);
+
+// console.log(reduceArray);
+
+const array = [
+  {
+    username: "john",
+    team: "red",
+    score: 5,
+    items: ["ball", "book", "pen"]
+  },
+  {
+    username: "becky",
+    team: "blue",
+    score: 10,
+    items: ["tape", "backpack", "pen"]
+  },
+  {
+    username: "susy",
+    team: "red",
+    score: 55,
+    items: ["ball", "eraser", "pen"]
+  },
+  {
+    username: "tyson",
+    team: "green",
+    score: 1,
+    items: ["book", "pen"]
+  },
+
+];
+
+const newUserArr = []
+const exclamationArray = array.forEach((user) => {
+  newUserArr.push(user.username + "!")
+});
+console.log(newUserArr)
+
+const questionMarkMap = array.map((user) => {
+  return user.username + "?";
+})
+console.log(questionMarkMap);
+
+const redFilter = array.filter(affiliation => affiliation.team === "red");
+
+console.log(redFilter);
+
+const reduceTotalScore = array.reduce((acc, totScore) => {
+  return acc + totScore.score;
+},0)
+
+console.log(reduceTotalScore);
+//console.log(array.length)
+
+
+const itemOwner = array.map((user) => {
+  user.items = user.items.map(item => {
+    return item + "!"
+  })
+  return user;
+})
+
+console.log(itemOwner)
