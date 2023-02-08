@@ -48,77 +48,77 @@
 // console.log(array2[1][1]);
 
 
-// var user = {
-//     name: "John",
-//     age: 34,
-//     hobby: "soccer",
-//     isMarried: false,
-//     spells: ["abrakadabra", "shazam", "boo"],
-//     shout: function shout() { console.log("AHHHHH!")}
-// }
+var user = {
+    name: "John",
+    age: 34,
+    hobby: "soccer",
+    isMarried: false,
+    spells: ["abrakadabra", "shazam", "boo"],
+    shout: function shout() { console.log("AHHHHH!")}
+}
 
 // // a function inside an object is called a method.
-// var list = [
-//     {
-//         username: "andy",
-//         password: "secret"
-//     },
-//     {
-//         username: "jess",
-//         password: "123"
-//     }
-// ]
+var list = [
+    {
+        username: "andy",
+        password: "secret"
+    },
+    {
+        username: "jess",
+        password: "123"
+    }
+]
 
 
-// var database = [{
-//     username: "craig",
-//     password: "1234"
-// },
-// {
-//     username: "sally",
-//     password: "123"
-// },
-// {
-//     username: "ingrid",
-//     password: "777"
-// }
-// ];
+var database = [{
+    username: "craig",
+    password: "1234"
+},
+{
+    username: "sally",
+    password: "123"
+},
+{
+    username: "ingrid",
+    password: "777"
+}
+];
 
-// var newsFeed = [
-//     {
-//         username: "Tim",
-//         timeline: "So tired from all of that learning"
-//     },
-//     {
-//         username: "sally",
-//         timeline: "JavaScript is soo cool"
-//     },
-//     {
-//         username: "mitch",
-//         timeline: "JavaScript is pretty cool"
-//     }
-// ]
+var newsFeed = [
+    {
+        username: "Tim",
+        timeline: "So tired from all of that learning"
+    },
+    {
+        username: "sally",
+        timeline: "JavaScript is soo cool"
+    },
+    {
+        username: "mitch",
+        timeline: "JavaScript is pretty cool"
+    }
+]
 
-// var usernamePrompt = prompt("What's your username? ");
-// var passwordPrompt = prompt("What's your password? ");
-// // console.log(usernamePrompt, passwordPrompt)
+var usernamePrompt = prompt("What's your username? ");
+var passwordPrompt = prompt("What's your password? ");
+// console.log(usernamePrompt, passwordPrompt)
 
-// function isUserValid(username, password) {
-//     for (var i = 0; i < database.length; i++) {
-//         if (database[i].username === username && database[i].password === password) {
-//             return true;
-//         }
-//     }
-//     return false;
-// }
-// function signIn(username, password) {
+function isUserValid(username, password) {
+    for (var i = 0; i < database.length; i++) {
+        if (database[i].username === username && database[i].password === password) {
+            return true;
+        }
+    }
+    return false;
+}
+function signIn(username, password) {
 
-//     if (isUserValid(username, password)) {
-//         console.log(newsFeed)
-//     } else {
-//         alert("Sorry wrong username and password!");
-//     }
-// }
+    if (isUserValid(username, password)) {
+        console.log(newsFeed)
+    } else {
+        alert("Sorry wrong username and password!");
+    }
+}
 
 // signIn(usernamePrompt, passwordPrompt);
 
@@ -127,32 +127,32 @@
 
 
 
-// for (let i = 0; i < todos.length; i++) {
-//   todos[i] = todos[i] += "!"
-//   console.log(i)
-// }
+for (let i = 0; i < todos.length; i++) {
+  todos[i] = todos[i] += "!"
+  console.log(i)
+}
 
-// todos.forEach(function(i) {
-//   console.log(i)
-// });
+todos.forEach(function(i) {
+  console.log(i)
+});
 
-// var todosLength = todos.length; // = 5
-// // for (let i = 0; i < todosLength; i++) {
-// //   todos.pop()
-// // }
+var todosLength = todos.length; // = 5
+for (let i = 0; i < todosLength; i++) {
+  todos.pop()
+}
 // // console.log(todos)
 
-// var counterOne = 10;
-// while (counterOne > 0) {
-//   console.log(counterOne);
-//   counterOne--
-// }
+var counterOne = 10;
+while (counterOne > 0) {
+  console.log(counterOne);
+  counterOne--
+}
 
-// var counterTwo = 10;
-// do {
-//   console.log(counterTwo)
-//   counterTwo--;
-// } while (counterTwo > 0)
+var counterTwo = 10;
+do {
+  console.log(counterTwo)
+  counterTwo--;
+} while (counterTwo > 0)
 
 
 // scope
@@ -392,3 +392,14 @@ compose(add1, add5)(10); // => 16
 // const compose = (sum, sum) => (5) => sum(sum(5));
 // f and g are replaced with sum 2 times, then a becomes 5
 // the sum functon is the num plus one, so sum(sum(5)) sum(5) + 1 = 6 then sum(5) = 7
+
+
+// Advanced Arrays
+const array = [1,2,10,16];
+const double = [];
+
+const newArray = array.forEach((num) => {
+  double.push(num * 2);
+}) 
+
+console.log(double);
