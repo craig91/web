@@ -538,3 +538,28 @@ class Mamal extends Animal {
 }
 
 const cow1 = new Mamal("Carla", "Milk Cow", "Brown");
+
+
+let objplus = {
+  username: "Santa",
+  username1: "Rudolf",
+  username2: "Mr. Grinch"
+}
+
+Object.keys(objplus).forEach((key, index) =>  {
+  console.log(key, objplus[key])
+})
+
+Object.values(objplus).forEach(value => {
+  console.log(value)
+})
+
+Object.entries(objplus).forEach(value => {
+  console.log(value)
+})
+
+
+Object.entries(objplus).map(value => {
+  return value[1] + value[0].replace('username', '');
+});
+
