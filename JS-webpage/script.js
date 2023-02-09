@@ -519,3 +519,22 @@ console.log("Object.assign clone:", clone)
 console.log("spread operator clone:", clone2)
 console.log("original object:", obj)
 console.log("super clone version to avoid shadow cloning:", superClone)
+
+class Animal {
+  constructor(name, type, color) {
+    this.name = name;
+    this. type = type;
+    this.color = color;
+  }
+}
+
+class Mamal extends Animal {
+  constructor(name, type, color) {
+    super(name, type , color)
+  }
+  sound() {
+    console.log(`I am a cow and my name is ${this.name}, my type is ${this.type}, and my color is ${this.color}, nice to meet you`);
+  }
+}
+
+const cow1 = new Mamal("Carla", "Milk Cow", "Brown");
