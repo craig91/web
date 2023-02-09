@@ -494,11 +494,11 @@ class Player {
 
 class Wizard extends Player {
   constructor(name, type) {
-    console.log('wizard', this)
     super(name, type)
+    console.log('wizard', this)
   }
   play() {
-    console.log(`weee i'm a ${this.type}`);
+    console.log(`weee I'm a ${this.type}`);
   }
 }
 
