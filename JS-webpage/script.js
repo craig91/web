@@ -563,3 +563,46 @@ Object.entries(objplus).map(value => {
   return value[1] + value[0].replace('username', '');
 });
 
+
+
+const bigArray = [-1,0,3,100,99,2,99];
+const biggerArray = ['a', 3,4,2];
+const biggestArray = [];
+
+function biggestNumberInArray(arr) {
+  for (let i = 0; i < arr.length; i++){
+    let highest = 0;
+    if (highest < arr[i] ) {
+      highest = arr[i]
+    }
+    
+  }
+  return highest
+}
+biggestNumberInArray(bigArray)
+
+
+function biggestNumberInArray2(arr) {
+  let highest = 0;
+  arr.forEach(element =>  {
+    if (highest < element) {
+      highest = element;
+    }
+  })
+  return highest;
+}
+
+biggestNumberInArray2(biggerArray);
+
+
+function biggestNumberInArray3(arr) {
+  let highest = 0;
+  for (item of arr) {
+    if (highest < arr) {
+      highest = arr
+    }
+  }
+  return highest;
+}
+
+biggestNumberInArray3(biggestArray);
