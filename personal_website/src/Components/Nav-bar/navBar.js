@@ -1,9 +1,8 @@
-// import './Components/Nav-bar/navBarStyle.css';
 function Nav() {
     return(
         <div>
             <header className="header">
-                <h1 className="logo"><a href="#"></a></h1>
+                <h1 className="logo"><a href="#">Craig</a></h1>
                 <ul className="main-nav">
                     <li>Home</li>
                     <li>About</li>
