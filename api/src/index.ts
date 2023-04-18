@@ -38,22 +38,6 @@ app.post('/signUp', async (req, res) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 app.listen('8080', () => {
     console.log("running.....")
 })
