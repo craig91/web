@@ -4,6 +4,15 @@ const app = express();
 const port = process.env.port  || 3000;
 
 
+const fortunes = [
+    "Conquer your fears or they will conquer you.",
+    "Rivers need springs",
+    "Do not fear what you don't know",
+    "You will have a pleasant surprise",
+    "Whenever possible, keep it simple"
+];
+
+
 app.engine('handlebars', engine({
     defaultLayout: 'main',
 }));
@@ -12,9 +21,13 @@ app.set('views', './views');
 
 
 app.get('/', (req, res) => res.render('home'))
-app.get('/about', (req, res) => res.render('about'))
+app.get('/about', (req, res) => {
+    const randomFortune = fortunes[Math.floor(Math.random()*fortunes.length)]
+    res.render('about', { fortune: randomFortune })
+})
 
 
+app.use(express.static(__dirname + './public'));
 
 
 app.use((req, res) => {
@@ -31,3 +44,5 @@ app.use((err, req, res, next) => {
 app.listen(port, () => console.log(
     `Express started on http://localhost:${port}; ` + 
     `press Ctrl-c to terminate.` ))
+
+
