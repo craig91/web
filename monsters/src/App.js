@@ -19,7 +19,7 @@ class App extends Component {
           <button 
           onClick={() => {
             this.setState(() => {return {
-              name: { firstName: 'Minami', lastName: "Tsunoda" },
+              name: { firstName: 'Minami', lastName: 'Tsunoda' },
             }}, () => {
               console.log(this.state)
             });
