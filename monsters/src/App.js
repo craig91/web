@@ -4,7 +4,22 @@ import './App.css';
 class App extends Component {
   constructor() {
     super();
-    this.state = {}
+    this.state = {
+      monsters: [],
+    }
+  }
+
+
+  componentDidMount() {
+      fetch('https://jsonplaceholder.typicode.com/users')
+            .then(response => response.json())
+            .then((users) => this.setState(() => {
+              return {monsters: users}
+            },
+              () => {
+                console.log(this.state);
+              }
+            ));
   }
   render() {
     return (
