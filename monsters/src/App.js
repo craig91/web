@@ -13,18 +13,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>Hi {this.state.name.firstName} {this.state.name.lastName}, I work at {this.state.company} </p>
-          <button 
-          onClick={() => {
-            this.setState(() => {return {
-              name: { firstName: 'Minami', lastName: 'Tsunoda' },
-            }}, () => {
-              console.log(this.state)
-            });
-          }}>Change Name</button>
-        </header>
+       
       </div>
     );
   }
