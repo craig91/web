@@ -7,21 +7,25 @@ class App extends Component {
     this.state = {
       monsters: [],
     }
+    console.log('1');
   }
 
 
   componentDidMount() { // runs 3rd --> the moment the component mounts (from render) the code inside this lifecycle method runs hence the name "component did mount"
+      console.log('3')
       fetch('https://jsonplaceholder.typicode.com/users')
             .then(response => response.json())
             .then((users) => this.setState(() => {
               return {monsters: users}
             },
               () => {
-                console.log(this.state);
+                //console.log(this.state);
               }
             ));
   }
   render() { // Runs 2nd --> deterimines what to show (to the screen) --> renders the initial UI of this component
+              // Runs 4th --> now that component did mount ran (state has changed due to setState()) --> render method runs again.
+    console.log('2')
     return (
       <div className="App">
         { // Map creates a returns a new array + also each child needs a key prop
