@@ -23,11 +23,32 @@ class App extends Component {
               }
             ));
   }
+
+
+
   render() { // Runs 2nd --> deterimines what to show (to the screen) --> renders the initial UI of this component
               // Runs 4th --> now that component did mount ran (state has changed due to setState()) --> render method runs again.
     console.log('Render method')
     return (
       <div className="App">
+        <input 
+          className='search-box' 
+          type='search' 
+          placeholder='Search Monsters' 
+          onChange={(event) => 
+          {
+            console.log(event.target.value);
+            const searchString = event.target.value.toLowerCase();
+            const filteredMonsters = this.state.monsters.filter((monster) => {
+              return monster.name.toLowerCase().includes(searchString);
+            });
+
+            this.setState(() => {
+              return { monsters: filteredMonsters }
+            })
+          }}/>
+
+
         { // Map creates a returns a new array + also each child needs a key prop
           this.state.monsters.map((monster) => {
             return <div key={monster.id} ><h1>{monster.name}</h1></div>
