@@ -26,7 +26,7 @@ class App extends Component {
 
 
 
-  render() { // Runs 2nd --> deterimines what to show (to the screen) --> renders the initial UI of this component
+  render() {  // Runs 2nd --> deterimines what to show (to the screen) --> renders the initial UI of this component
               // Runs 4th --> now that component did mount ran (state has changed due to setState()) --> render method runs again.
     console.log('Render method')
     return (
