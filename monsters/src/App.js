@@ -60,7 +60,7 @@ class App extends Component {
 
         { // Map creates a returns a new array + also each child needs a key prop
           filteredMonsters.map((monster) => {
-            return <div key={monster.id}><h1>{monster.name}</h1><h2>{monster.email}</h2></div>
+            return <div key={monster.id}><h1>{monster.name}</h1><h2>{monster.email}</h2><h3>Compay Name: {monster.company.name}</h3></div>
           })
         }
       </div>
