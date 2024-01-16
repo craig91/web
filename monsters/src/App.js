@@ -43,6 +43,7 @@ class App extends Component {
           placeholder='Search Monsters' 
           onChange={(event) => 
           {
+            console.log(event)
             // console.log(event.target.value);
             // console.log({startingArray: this.state.monsters})
             const searchField = event.target.value.toLowerCase(); // <-- event.target.value refers to the input I type into the search string
