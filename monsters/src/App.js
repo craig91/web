@@ -48,7 +48,7 @@ class App extends Component {
             // console.log({startingArray: this.state.monsters})
             const searchField = event.target.value.toLowerCase(); // <-- event.target.value refers to the input I type into the search string
             // const filteredMonsters = this.state.monsters.filter((monster) => { // <-- filter() gives back a new array, so the original array (in state above) is not modified
-            //   return monster.name.toLowerCase().includes(searchString); // <-- returns to me the monster name in lowercase and check if its included in the new array. 
+            //   return monster.name.toLowerCase().includes(searchString); // <-- returns to me the monster name in lowercase and check if its included in the new array. Includes also returns a boolean, that will return true if the string (basicall every letter I type) I pass to it is included in monster.name.
             // });
 
             this.setState(() => {
@@ -61,7 +61,7 @@ class App extends Component {
 
         { // Map creates a returns a new array + also each child needs a key prop
           filteredMonsters.map((monster) => {
-            return <div key={monster.id}><h1>{monster.name}</h1><h2>{monster.email}</h2><h3>Compay Name: {monster.company.name}</h3></div>
+            return <div key={monster.id}><h1>{monster.name}</h1></div>
           })
         }
       </div>
