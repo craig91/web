@@ -35,9 +35,11 @@ onSearchChange = (event) => {
   render() {  // Runs 2nd --> deterimines what to show (to the screen) --> renders the initial UI of this component
               // Runs 4th --> now that component did mount ran (state has changed due to setState()) --> render method runs again.
     // console.log('Render method')
+    const {monsters, searchField } = this.state; // --> destructuring
+    const { onSearchChange } = this;
 
-    const filteredMonsters = this.state.monsters.filter((monster) => { // <-- filter() gives back a new array, so the original array (in state above) is not modified
-      return monster.name.toLowerCase().includes(this.state.searchField); // <-- returns to me the monster name in lowercase and check if its included in the new array. 
+    const filteredMonsters = monsters.filter((monster) => { // <-- filter() gives back a new array, so the original array (in state above) is not modified
+      return monster.name.toLowerCase().includes(searchField); // <-- returns to me the monster name in lowercase and check if its included in the new array. 
     });
 
     return (
@@ -46,7 +48,7 @@ onSearchChange = (event) => {
           className='search-box' 
           type='search' 
           placeholder='Search Monsters' 
-          onChange={this.onSearchChange}
+          onChange={onSearchChange}
           // onChange={(event) => 
           // {
           //   console.log(event) // --> look at synthetic base event
