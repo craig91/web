@@ -56,7 +56,7 @@ onSearchChange = (event) => {
           //   // console.log({startingArray: this.state.monsters})
           //   const searchField = event.target.value.toLowerCase(); // <-- event.target.value refers to the input I type into the search string
           //   // const filteredMonsters = this.state.monsters.filter((monster) => { // <-- filter() gives back a new array, so the original array (in state above) is not modified
-          //   //   return monster.name.toLowerCase().includes(searchString); // <-- returns to me the monster name in lowercase and check if its included in the new array. Includes also returns a boolean, that will return true if the string (basicall every letter I type) I pass to it is included in monster.name.
+          //   //   return monster.name.toLowerCase().includes(searchString); // <-- returns to me the monster name in lowercase and check if its included in the new array. Includes also returns a boolean, that will return true if the string (basically every letter I type) I pass to it is included in monster.name.
           //   // });
 
           //   this.setState(() => {
